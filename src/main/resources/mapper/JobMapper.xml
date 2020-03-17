@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hello.mapper.JobMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.hello.pojo.Job">
+        <id column="id" property="id" />
+        <result column="job_code" property="jobCode" />
+        <result column="job_name" property="jobName" />
+        <result column="description" property="description" />
+        <result column="job_enable" property="jobEnable" />
+        <result column="job_lock" property="jobLock" />
+        <result column="time_out" property="timeOut" />
+        <result column="create_time" property="createTime" />
+        <result column="last_update_time" property="lastUpdateTime" />
+        <result column="version" property="version" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, job_code, job_name, description, job_enable, job_lock, time_out, create_time, last_update_time, version
+    </sql>
+
+</mapper>
